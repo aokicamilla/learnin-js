@@ -1,11 +1,22 @@
-const arrayOriginal = ["Maria", "Carlos", "Eduardo", "Samanta"]
+const alunos = ["Maria", "Carlos", "Eduardo", "Samanta"]
+const medias = [7.5,6.8,8.3,5.5]
 
+const lista = [alunos,medias]
 
-console.log(arrayConcat)
-console.log(arrayOriginal)
-//no numero ele trata o [90,100] como um elemento só, para conseguir separar podemos usar o método .flat()
-const arrayOriginal2 = [50, 60, 70]
-const arrayConcat2 = arrayOriginal2.concat([80, [90, 100]])
+console.log(
+    `A aluna da posição 1 da lista é ${lista[0][0]}`
+)
+console.log(lista[0])
 
-console.log(arrayConcat2)
-console.log(arrayOriginal2)
+function exibeNomeENota(aluno) {
+    if(lista[0].includes(aluno)) {
+        const indice = lista[0].indexOf(aluno)
+        const mediaAluno = lista[1][indice]
+        console.log(`${aluno} tem a média ${mediaAluno}.`);
+    } else {
+        console.log('Estudante não está na lista')
+    }
+}
+
+exibeNomeENota('Maria');
+exibeNomeENota('José')
