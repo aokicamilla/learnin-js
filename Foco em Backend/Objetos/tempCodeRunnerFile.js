@@ -1,6 +1,17 @@
-//     console.log(`Idade: ${pessoa.idade} anos (Tipo: ${typeof pessoa.idade})`);
-// //     console.log(`Solteiro: ${pessoa.solteiro} (Tipo: ${typeof pessoa.solteiro})`);
-// //     console.log(`Hobbies: ${pessoa.hobbies.join(", ")} (Tipo: ${typeof pessoa.hobbies})`);
-// // }
-
-// mostrarInfoPessoa(infoPessoa)
+const carro = {
+    marca: 'fiat',
+    modelo: 'palio',
+    ano: 1998,
+    cor: 'amarelo' ,
+    ligado:'' ,
+    ligar: function(ligado) {
+        if (ligado === true) {
+            console.log('Carro está ligado')
+        }
+    },
+    desligar: function(ligado) {
+        if (ligado !== true) {
+            console.log('Carro está desligado')
+        }
+    }
+}
